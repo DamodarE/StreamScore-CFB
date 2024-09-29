@@ -1,0 +1,131 @@
+.matchups-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.matchups-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.week-selector {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.week-selector button {
+  margin: 5px;
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.week-selector button.active {
+  background-color: #0077be;
+  color: white;
+}
+
+.matchups-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.matchup-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.matchup-item:hover {
+  transform: translateY(-5px);
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.home-team {
+  justify-content: flex-end;
+}
+
+.away-team {
+  justify-content: flex-start;
+}
+
+.team-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin: 0 10px;
+}
+
+.team-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.score {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.matchup-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+
+.versus {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.date {
+  font-size: 0.9em;
+  color: #fff;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .matchups-container {
+    width: 95%;
+  }
+
+  .matchup-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team, .matchup-info {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .home-team, .away-team {
+    justify-content: center;
+  }
+}

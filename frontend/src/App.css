@@ -1,0 +1,186 @@
+.App {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.navbar-logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar-links li {
+  margin-left: 1rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.home, .matchups, .login, .register {
+  padding: 2rem;
+}
+
+/* Existing styles... */
+
+/* Updated Highlights Component Styles */
+.highlights {
+  padding: 20px;
+  background-color: #f0f0f0;
+  max-width: 1400px; /* Increased max-width for the entire component */
+  margin: 0 auto;
+}
+
+.highlights h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  width: 300px;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0077be;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #005fa3;
+}
+
+.video-player-container {
+  position: relative;
+  width: 95%; /* Increased width */
+  max-width: 1300px; /* Increased max-width */
+  margin: 0 auto 20px;
+  padding-top: 53.438%; /* 16:9 aspect ratio (1920x1080) */
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.highlights-menu {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 15px 0;
+  justify-content: flex-start;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.highlight-item {
+  flex: 0 0 auto;
+  width: 240px; /* Slightly increased width */
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.highlight-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-item.selected {
+  border: 2px solid #0077be;
+}
+
+.highlight-item img {
+  width: 100%;
+  height: 135px; /* Adjusted height to maintain 16:9 aspect ratio */
+  object-fit: cover;
+}
+
+.highlight-item-content {
+  padding: 10px;
+}
+
+.highlight-item h3 {
+  margin: 0;
+  font-size: 0.9em;
+  color: #333;
+  line-height: 1.4;
+  /* Limit to 2 lines of text */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .video-player-container {
+    width: 100%;
+    padding-top: 56.25%; /* Standard 16:9 aspect ratio */
+  }
+  
+  .highlights-menu {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .highlight-item {
+    width: 200px;
+  }
+  
+  .highlight-item img {
+    height: 112px; /* Maintain 16:9 aspect ratio */
+  }
+}
